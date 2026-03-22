@@ -1,0 +1,97 @@
+:root {
+  --primary: #4F46E5;
+  --bg-app: #F1F5F9;
+  --panel-bg: #FFFFFF;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: var(--bg-app);
+  font-family: 'Inter', sans-serif;
+}
+
+.editor-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.business-card {
+  width: 550px;
+  height: 320px;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Template Specifics */
+.card-template-minimal { justify-content: center; text-align: center; }
+.card-template-corporate { border-left: 15px solid var(--primary); }
+
+.input-group { margin-bottom: 1.5rem; }
+.input-group label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; }
+.input-group input { width: 100%; padding: 0.75rem; border: 1px solid #E2E8F0; border-radius: 8px; }
+
+.btn-export {
+  margin-top: 2rem;
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.template-card {
+  background: white;
+  border: 2px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.template-card.active {
+  border-color: var(--primary);
+  background: #F5F3FF;
+}
+
+.template-name {
+  display: block;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #1E293B;
+}
+
+.template-desc {
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+.template-preview-icon {
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  background: #CBD5E1;
+}
+
+.preview-minimal { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+.preview-corporate { border-left: 6px solid var(--primary); background: #1e293b; }
+.preview-creative { background: var(--primary); }
